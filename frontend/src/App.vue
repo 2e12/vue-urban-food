@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <b-navbar class="is-primary">
+        <b-navbar
+                class="is-primary"
+                fixed-top>
             <template slot="start">
                 <b-navbar-item tag="router-link" to="/">
                     Home

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Product from '../views/Product.vue'
+import Products from '../views/Products.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ Vue.use(VueRouter)
     path: '/product/:id',
     name: 'Product',
     component: Product
+  },
+  {
+    path: '/products',
+    name: 'Products',
+    component: Products
   },
 ]
 
