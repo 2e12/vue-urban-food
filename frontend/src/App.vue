@@ -11,10 +11,8 @@
                 </b-navbar-item>
             </template>
         </b-navbar>
-        <section class="section">
-            <div class="container">
-                <router-view/>
-            </div>
-        </section>
+        <div class="container">
+            <router-view/>
+        </div>
     </div>
 </template>
