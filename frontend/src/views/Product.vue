@@ -22,7 +22,7 @@
                 {{ product.description }}
             </p>
 
-            <b-button type="is-primary" expanded>In den Warenkorb</b-button>
+            <b-button type="is-primary" @click="addToBasket" expanded>In den Warenkorb</b-button>
         </section>
 
     </div>
@@ -54,6 +54,14 @@
                         })
                     }
                 });
+        },
+        methods: {
+            addToBasket() {
+                this.$buefy.snackbar.open({
+                    message: 'Added to basket.',
+                    type: 'is-success',
+                })
+            }
         }
     }
 </script>
