@@ -8,7 +8,8 @@
                     <div class="card">
                         <img src="https://prag.de/wp-content/uploads/2017/12/Prag-essen-prag-Die-10-Besten-Restaurants-in-Prag.jpg">
                         <div class="card-content">
-                            <h4 class="title is-4">{{ product.name }}</h4>
+                            <h2 class="title is-4">{{ product.name }}</h2>
+                            <h3 class="subtitle">{{ product.price }} CHF</h3>
                             <div class="tags">
                                 <b-tag type="is-dark" v-for="category in product.categories">{{ category.name }}</b-tag>
                             </div>
