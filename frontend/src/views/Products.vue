@@ -1,9 +1,10 @@
 <template>
     <section class="section">
-        <div class="tile is-ancestor">
-            <div class="tile is-parent" v-for="product in products">
+        <Load :is-loading="products.pending"/>
+        <div class="tile is-ancestor" v-if="products.fulfilled">
+            <div class="tile is-parent" v-for="product in products.value">
                 <router-link
-                  :to="{ name: 'Product', params: {id: product.id } }"
+                        :to="{ name: 'Product', params: {id: product.id } }"
                 >
                     <div class="card">
                         <img src="https://prag.de/wp-content/uploads/2017/12/Prag-essen-prag-Die-10-Besten-Restaurants-in-Prag.jpg">
@@ -22,26 +23,22 @@
 </template>
 
 <script>
+    import Load from '../components/Load.vue'
+
     export default {
-        name: 'Home',
-        activeTab: 0,
-        data() {
-            return {
-                products: false,
-            }
+        name: 'Products',
+        components: {
+            Load,
         },
-        mounted() {
-            fetch(this.$apiServer + 'product/?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    this.$data.products = data
-                    if(data.detail){
-                        this.$buefy.snackbar.open({
-                            message: data.detail,
-                            type: 'is-danger',
-                        })
-                    }
-                });
+        data: () => ({
+            products: {},
+        }),
+        fetch: {
+            products() {
+                return {
+                    url: this.$apiServer + 'product/?format=json',
+                }
+            }
         }
     }
 </script>
