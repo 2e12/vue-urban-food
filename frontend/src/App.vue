@@ -3,6 +3,11 @@
         <b-navbar
                 class="is-primary"
                 fixed-top>
+            <template slot="brand">
+              <b-navbar-item class="has-text-weight-bold" tag="router-link" :to="{ path: '/' }">
+                Urban Food
+              </b-navbar-item>
+            </template>
             <template slot="start">
                 <b-navbar-item tag="router-link" to="/">
                     Home
