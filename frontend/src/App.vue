@@ -8,8 +8,12 @@
                     Home
                 </b-navbar-item>
 
-                <b-navbar-item tag="router-link" to="/about">
-                    About
+                <b-navbar-item tag="router-link" to="/products">
+                    Products
+                </b-navbar-item>
+
+                <b-navbar-item tag="router-link" to="/cart">
+                    Shopping cart
                 </b-navbar-item>
             </template>
         </b-navbar>
