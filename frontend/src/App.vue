@@ -18,3 +18,22 @@
         </div>
     </div>
 </template>
+<style lang="scss">
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #57d319;
+$primary-invert: findColorInvert($primary);
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+);
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+</style>
