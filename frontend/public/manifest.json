@@ -1,0 +1,10 @@
+{
+  "name": "Urban Food",
+  "short_name": "Urban Food",
+  "theme_color": "#57d319",
+  "background_color": "#57d319",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/"
+}
