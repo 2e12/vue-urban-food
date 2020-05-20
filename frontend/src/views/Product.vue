@@ -22,7 +22,7 @@
                 {{ product.description }}
             </p>
 
-            <b-button type="is-primary" @click="addToBasket" expanded>In den Warenkorb</b-button>
+            <b-button type="is-primary" @click="addToBasket" expanded>Add to cart</b-button>
         </section>
 
     </div>

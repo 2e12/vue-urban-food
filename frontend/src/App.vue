@@ -23,10 +23,14 @@
     </div>
 </template>
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400&display=swap');
+//Custom font
+$family-sans-serif: 'IBM Plex Sans', sans-serif;
+
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #57d319;
+$primary: #7cb342;
 $primary-invert: findColorInvert($primary);
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
@@ -38,6 +42,8 @@ $colors: (
 );
 
 // Import Bulma and Buefy styles
+
+
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 </style>
