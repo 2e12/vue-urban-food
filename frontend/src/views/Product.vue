@@ -1,6 +1,5 @@
 <template>
-    <div>
-
+    <div class="container">
         <b-carousel
                 v-model="carousel"
                 :has-drag="true"
@@ -24,7 +23,6 @@
 
             <b-button type="is-primary" @click="addToBasket" expanded>Add to cart</b-button>
         </section>
-
     </div>
 </template>
 

@@ -22,9 +22,7 @@
                 </b-navbar-item>
             </template>
         </b-navbar>
-        <div class="container">
-            <router-view/>
-        </div>
+        <router-view/>
     </div>
 </template>
 <style lang="scss">
@@ -46,8 +44,8 @@ $colors: (
     "primary": ($primary, $primary-invert),
 );
 
-// Import Bulma and Buefy styles
-
+$fullhd-enabled: false;
+$widescreen-enabled: false;
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
