@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400&display=swap');
+//Custom font
+$family-sans-serif: 'IBM Plex Sans', sans-serif;
+
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #7cb342;
+$primary-invert: findColorInvert($primary);
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+);
+
+$fullhd-enabled: false;
+$widescreen-enabled: false;
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+
+// Footer
+.darkfooter {
+  background: $dark;
+  color: $primary-invert;
+}
+
+.darkfooter a {
+  color: $primary-invert;
+  cursor: pointer;
+}
+
+.darkfooter a.router-link-exact-active, .darkfooter a:hover {
+  opacity: 0.6;
+}

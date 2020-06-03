@@ -23,30 +23,18 @@
             </template>
         </b-navbar>
         <router-view/>
+      <Footer/>
     </div>
 </template>
-<style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400&display=swap');
-//Custom font
-$family-sans-serif: 'IBM Plex Sans', sans-serif;
 
-@import "~bulma/sass/utilities/_all";
+<script>
+import Footer from './components/Footer.vue'
+import '../public/style.scss'
 
-// Set your colors
-$primary: #7cb342;
-$primary-invert: findColorInvert($primary);
-// Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: (
-    "white": ($white, $black),
-    "black": ($black, $white),
-    "light": ($light, $light-invert),
-    "dark": ($dark, $dark-invert),
-    "primary": ($primary, $primary-invert),
-);
-
-$fullhd-enabled: false;
-$widescreen-enabled: false;
-
-@import "~bulma";
-@import "~buefy/src/scss/buefy";
-</style>
+export default {
+  name: 'App',
+  components: {
+    Footer,
+  },
+}
+</script>

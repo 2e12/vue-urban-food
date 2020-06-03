@@ -46,19 +46,13 @@
                 .then(data => {
                     this.$data.product = data
                     if(data.detail){
-                        this.$buefy.snackbar.open({
-                            message: data.detail,
-                            type: 'is-danger',
-                        })
+                        this.$buefy.toast.open(data.detail)
                     }
                 });
         },
         methods: {
             addToBasket() {
-                this.$buefy.snackbar.open({
-                    message: 'Added to basket.',
-                    type: 'is-success',
-                })
+              this.$buefy.toast.open('Added to basket.')
             }
         }
     }
