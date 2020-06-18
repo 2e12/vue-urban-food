@@ -22,13 +22,22 @@
           </div>
           <div class="column">
             <h3 class="has-text-weight-bold">About</h3>
-            Imprint<br>
-            About us<br>
-            Data protection<br>
+            <ul>
+              <li>
+                <router-link :to="{ name: 'Imprint' }">
+                  Imprint
+                </router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'About' }">
+                  About us
+                </router-link>
+              </li>
+            </ul>
           </div>
         </div>
         <br>
-        <span class="has-text-weight-bold">© Gabriel Beutler 2020</span>
+        <span class="has-text-weight-bold">Developed by <a href="https://github.com/2e12">2e12</a></span>
       </section>
     </div>
   </div>
