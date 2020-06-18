@@ -1,5 +1,7 @@
-# Django buefy template
-Easy Django and vue template, using buefy.
+# Urban Food 2.0
+
+Food Store developed with Django(rest), vue.js and buefy.
+
 ## Backend
 
     $ cd backend
