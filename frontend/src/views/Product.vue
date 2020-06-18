@@ -21,7 +21,9 @@
                 {{ product.description }}
             </p>
 
-            <b-button type="is-primary" @click="addToBasket" expanded>Add to cart</b-button>
+            <b-button v-if="!$store.getters.isItemInCart(product)" type="is-primary" @click="addToBasket(product)" expanded>Add to cart</b-button>
+            <b-button v-else expanded disabled>Already in the cart</b-button>
+
         </section>
     </div>
 </template>
@@ -51,8 +53,9 @@
                 });
         },
         methods: {
-            addToBasket() {
-              this.$buefy.toast.open('Added to basket.')
+            addToBasket(item) {
+              this.$store.commit('addItemToCart', item)
+              this.$buefy.toast.open('Added product to cart')
             }
         }
     }

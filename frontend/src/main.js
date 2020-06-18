@@ -13,6 +13,8 @@ Vue.use(Buefy)
 Vue.config.productionTip = false
 Vue.prototype.$apiServer = 'http://192.168.1.116:8000/'
 
+
+
 new Vue({
   router,
   store,

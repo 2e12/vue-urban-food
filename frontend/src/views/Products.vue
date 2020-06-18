@@ -52,6 +52,7 @@ export default {
 }
 
 .flex-container > .card {
+  flex-grow:1;
   width:260px;
   margin:24px;
 }
