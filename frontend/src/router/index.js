@@ -6,6 +6,7 @@ import Products from '../views/Products.vue'
 import Cart from '../views/Cart.vue'
 import About from '../views/static/About.vue'
 import Imprint from '../views/static/Imprint.vue'
+import SignIn from '../views/SignIn.vue'
 
 Vue.use(VueRouter)
 
@@ -40,12 +41,25 @@ Vue.use(VueRouter)
     name: 'Imprint',
     component: Imprint
   },
+  {
+    path: '/signin',
+    name: 'SignIn',
+    component: SignIn
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
+
 
 export default router

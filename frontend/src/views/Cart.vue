@@ -71,7 +71,8 @@
               title: 'Not signed in',
               message: 'We have determined that you are not signed in Log in or create an account so that we can your order to you. It won\'t take long, we promise.',
               cancelText: 'Cancel',
-              confirmText: 'Sign in'
+              confirmText: 'Sign in',
+              onConfirm: () => this.$router.push('SignIn'),
             })
           },
         },

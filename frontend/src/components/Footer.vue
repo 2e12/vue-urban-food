@@ -1,7 +1,7 @@
 <template>
   <div class="darkfooter">
-    <div class="container">
-      <section class="section">
+    <section class="section">
+      <div class="container">
         <div class="columns">
           <div class="column">
             <h3 class="has-text-weight-bold">Store</h3>
@@ -16,8 +16,11 @@
                   Products
                 </router-link>
               </li>
-              <li>Register</li>
-              <li>Login</li>
+              <li>
+                <router-link :to="{ name: 'SignIn' }">
+                  Sign In
+                </router-link>
+              </li>
             </ul>
           </div>
           <div class="column">
@@ -38,8 +41,8 @@
         </div>
         <br>
         <span class="has-text-weight-bold">Developed by <a href="https://github.com/2e12">2e12</a></span>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 
