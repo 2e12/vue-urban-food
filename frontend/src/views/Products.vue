@@ -1,8 +1,21 @@
 <template>
   <div class="container">
-    <Load :is-loading="products.pending"/>
-    <div v-if="products.fulfilled" class="flex-container">
-      <template v-for="product in products.value">
+
+    <div class="flex-container">
+      <div v-if="products.pending" class="card" v-for="index in 6" :key="index">
+
+        <div class="card-content">
+          <b-skeleton height="145px" active></b-skeleton>
+          <br>
+          <h2 class="title is-4"><b-skeleton active></b-skeleton></h2>
+          <h3 class="subtitle"><b-skeleton width="120px" active></b-skeleton></h3>
+
+          <b-skeleton width="64px" active></b-skeleton>
+        </div>
+      </div>
+
+
+      <template v-if="products.fulfilled" v-for="product in products.value">
         <div class="card">
           <router-link
           :to="{ name: 'Product', params: {id: product.id } }"
