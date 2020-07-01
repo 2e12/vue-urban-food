@@ -1,31 +1,22 @@
 <template>
-    <div class="home has-text-centered">
-        <div class="card" v-for="post in posts">
-            <div class="card-content">
-                <p class="title is-4">{{ post.author }}</p>
-                <div class="content">
-                    {{ post.text }}
-                </div>
-            </div>
+  <div>
+    <section class="section">
+      <div class="columns has-text-centered">
+        <div class="column">
+          <img style="max-width:200px;" src="img/icons/icon-384x384.png"></img>
         </div>
-        <b-button @click="clickMe">Click Me</b-button>
-    </div>
+        <div class="column">
+          <h1 class="title is-1">Urban Food</h1>
+          <h2 class="subtitle is-4">We deliver your food directly to your front door!</h2>
+          <b-button tag="router-link" to="/products" type="is-primary" size="is-medium">Shop now</b-button>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
     export default {
         name: 'Home',
-        data: function () {
-            return {
-                posts: []
-            }
-        },
-        methods: {
-            clickMe() {
-                fetch(this.$apiServer + 'posts/?format=json')
-                    .then(response => response.json())
-                    .then(data => this.$data.posts = data );
-            }
-        },
     }
 </script>
